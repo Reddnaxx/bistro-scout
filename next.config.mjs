@@ -4,7 +4,7 @@ const nextConfig = {
         remotePatterns: [
             {
                 protocol: "https",
-                hostname: process.env.API_NAME,
+                hostname: "booking-restaurants-v3va.vercel.app",
                 pathname: "/media/images/**"
             }
         ]
