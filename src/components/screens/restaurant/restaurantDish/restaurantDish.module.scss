@@ -1,0 +1,43 @@
+@import "@/styles/variables/variables";
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  border: 2px solid $modal-border-color;
+  overflow: hidden;
+  padding-bottom: 20px;
+  color: $text-color-accent;
+  min-height: 360px;
+}
+
+.imgContainer {
+  position: relative;
+  height: 80%;
+  width: 100%;
+
+  > img {
+    object-fit: cover;
+  }
+}
+
+.title {
+  font-size: 1.25rem;
+  max-width: 300px;
+  margin-top: 25px;
+}
+
+.weight {
+  font-size: 0.875rem;
+  margin-top: 5px;
+  color: $text-color-transparent-7;
+}
+
+.price {
+  font-size: 1.25rem;
+  margin-top: 20px;
+}

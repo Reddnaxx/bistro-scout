@@ -1,0 +1,21 @@
+.wrapper {
+  position: relative;
+}
+
+.item {
+  position: relative;
+  height: 500px;
+  border-radius: 30px;
+  overflow: hidden;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.image {
+  border: 3px solid white;
+  border-radius: 30px;
+  position: absolute;
+  object-fit: cover;
+}

@@ -1,0 +1,33 @@
+@import "@/styles/variables/variables";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 600px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+}
+
+.inputContainer {
+  margin-bottom: 20px;
+
+  input {
+    margin-bottom: 5px;
+  }
+}
+
+.checkbox {
+  margin-bottom: 10px;
+}
+
+.btns {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 330px;
+}

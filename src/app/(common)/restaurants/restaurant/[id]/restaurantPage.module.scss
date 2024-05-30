@@ -1,0 +1,31 @@
+@import "@/styles/variables/variables";
+
+.wrapper {
+  margin-top: 40px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    box-shadow: 0 0 150px 75px $red-glow-color;
+    right: 45%;
+    top: 65%;
+  }
+}
+
+.carousel {
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+
+.menus {
+  margin-top: 50px;
+}
+
+.reviews {
+  padding-inline: 195px;
+}

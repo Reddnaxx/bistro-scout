@@ -1,0 +1,33 @@
+@import "@/styles/variables/variables";
+
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.input {
+  font-size: 1.25rem;
+  background: none;
+  padding: 24px 30px;
+  border: 2px solid $input-border-color;
+  border-radius: 50px;
+  color: $text-color-main;
+  width: 100%;
+  resize: vertical;
+  max-height: 200px;
+}
+
+.eye {
+  position: absolute;
+  cursor: pointer;
+  right: 20px;
+}
+
+.alternative {
+  .input {
+    padding: 20px 15px;
+    border-radius: 8px;
+  }
+}
