@@ -39,7 +39,7 @@ const RestaurantProfileEditForm = () => {
   });
 
   const handleSave = async (data: RestaurantProfileEditSchema) => {
-    await RestaurantService.patchProfile(1, data);
+    await RestaurantService.patchProfile(restaurantId, data);
     router.push(pathname, { scroll: false });
   };
 

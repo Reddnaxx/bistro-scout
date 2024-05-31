@@ -77,13 +77,13 @@ const RestaurantInfoEditForm = () => {
     if (parkingTags)
       dto.tags = dto.tags.concat(parkingTags.map((tag) => tag.id));
 
-    await RestaurantService.patchProfile(1, {
+    await RestaurantService.patchProfile(id, {
       address: data.address,
       phone: data.phone,
       site: data.site,
     });
 
-    await RestaurantService.patchTags(1, {
+    await RestaurantService.patchTags(id, {
       tags: dto.tags,
     });
     router.push(pathname, { scroll: false });
