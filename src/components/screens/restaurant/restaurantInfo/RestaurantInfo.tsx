@@ -31,18 +31,18 @@ const RestaurantInfo = async ({
   mealTime,
   editable,
 }: RestaurantInfoProps) => {
-  // const response = await axios.get("https://geocode-maps.yandex.ru/1.x", {
-  //   params: {
-  //     apikey: process.env.YANDEX_API,
-  //     geocode: address,
-  //     format: "json",
-  //   },
-  // });
-  //
-  // const pos =
-  //   response.data.response.GeoObjectCollection.featureMember[0].GeoObject.Point.pos
-  //     .split(" ")
-  //     .reverse();
+  const response = await axios.get("https://geocode-maps.yandex.ru/1.x", {
+    params: {
+      apikey: process.env.YANDEX_API,
+      geocode: address,
+      format: "json",
+    },
+  });
+
+  const pos =
+    response.data.response.GeoObjectCollection.featureMember[0].GeoObject.Point.pos
+      .split(" ")
+      .reverse();
 
   return (
     <section className={styles.wrapper}>
@@ -111,7 +111,7 @@ const RestaurantInfo = async ({
       </section>
       <section className={styles.mapContainer}>
         <h3>Карта</h3>
-        {/*<YandexMap state={{ center: pos, zoom: 15 }} width={500} height={500} />*/}
+        <YandexMap state={{ center: pos, zoom: 15 }} width={500} height={500} />
       </section>
     </section>
   );
