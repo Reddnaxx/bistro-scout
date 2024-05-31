@@ -26,6 +26,10 @@
 
 .menus {
   margin-top: 195px;
+
+  & > div:nth-child(n+1) {
+    margin-top: 2rem;
+  }
 }
 
 .empty {

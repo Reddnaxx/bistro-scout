@@ -3,9 +3,9 @@
 import React, { useEffect } from "react";
 import Modal from "@/components/shared/modal/Modal";
 import Input from "@/components/shared/controls/input/Input";
-import {usePathname, useRouter, useSearchParams} from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import Button from "@/components/shared/controls/button/Button";
-import { FieldValues, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import styles from "./restaurantMenuEditModal.module.scss";
 import MenuService from "@/services/restaurant/MenuService";
 import { z } from "zod";
@@ -30,7 +30,7 @@ const RestaurantMenuEditModal = () => {
 
   const {
     register,
-    formState: { isValid, isLoading },
+    formState: { isValid, isSubmitting },
     handleSubmit,
     reset,
   } = useForm({
@@ -71,7 +71,7 @@ const RestaurantMenuEditModal = () => {
             type={"submit"}
             btnStyle={"filled"}
             font={"comfortaa"}
-            disabled={type === "create" && (!isValid || isLoading)}
+            disabled={type === "create" && (!isValid || isSubmitting)}
           >
             Сохранить
           </Button>
